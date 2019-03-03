@@ -1,0 +1,22 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}Accueil
+
+{% block pageTitle %}Accueil
+
+{% block main %}
+{% for movie in movies %}
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="..." alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">{{ movie.title }}</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="{{ path("test_evaluation", {"id" : movie.id})}}" class="btn btn-primary">Evaluer</a>
+<a href="{{ path("single", {"id" : movie.id})}}" class="btn btn-primary">Voir</a>
+</div>
+</div>
+{% endfor %}
+{% endblock %}
+{% endblock %}
+{% endblock %}

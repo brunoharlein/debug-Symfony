@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block pageTitle %} {{ movie.title }} {% endblock %}
+
+{% block main %}
+{{ movie.sumary }}
+{{ movie.author }}
+{{ movie.average }}
+{{dump(movie)}}
+{% endblock %}

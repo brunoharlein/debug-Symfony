@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{ path("index")}}">Accueil</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ path("app_login")}}">Log-in <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path("app_logout")}}">Log-out</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path("app_register")}}" tabindex="-1" aria-disabled="true">create user</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid"><div class="container"><h1 class="display-4">Movie Rating</h1>
+<p class="lead">Le premier site français pour évaluer les films tout pourris produits par le cinéma français</p>
+</div>
+</div>
+
+<div class="container">
+<h2>{% block pageTitle %}{% endblock %}</h2>{% block main %}{% endblock %}
+</div>
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
+<p class="lead">Si vous êtes un réalisateur français et que vous vous plaigniez des notes attribuées à votre navet, il ne fallait pas produire une telle bouze. XOXO</p>
+</div>
+</div>
+{% endblock %}
